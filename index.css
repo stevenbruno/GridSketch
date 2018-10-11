@@ -1,3 +1,9 @@
+.main {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+
 .sidenav { /* for desktop */
     height: 100%;
     width: 20vw;
@@ -5,7 +11,7 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #e8ebef;
+    background-color: #f2f6fb;
     overflow-x: hidden;
     box-shadow: 3px 0px 3px 0 #adab9f;
     text-align: center;
@@ -17,18 +23,20 @@
     display: inline-block;
 }
 
-.sidenav ul>div {
+.sidenav ul>div, button {
     margin: 1rem;
+    border: none;
     border-radius: 10px;
     box-shadow: 3px 3px 4px 0 #adab9f;
 } 
 
 
 #title {
-    margin-left: 20vw;
+    font: 4rem 'Lobster', cursive; 
 }
 
 /* #region Color Buttons */
+
 
 #black {
     background-color: black;
@@ -36,13 +44,11 @@
     width: 200px;
 }
 
-
 #red {
     background-color: #ff6961;
     height: 50px;
     width: 200px;
 }
-
 
 #orange {
     background-color: #ffb347;
@@ -50,13 +56,11 @@
     width: 200px;
 }
 
-
 #yellow {
     background-color: #fdfd96;
     height: 50px;
     width: 200px;
 }
-
 
 #green {
     background-color: #77dd77;
@@ -64,13 +68,11 @@
     width: 200px;
 }
 
-
 #blue {
     background-color: #aec6cf;
     height: 50px;
     width: 200px;
 }
-
 
 #purple {
     background-color: #b19cd9;
@@ -78,11 +80,26 @@
     width: 200px;
 }
 
-
 #white {
     background-color: white;
     height: 50px;
     width: 200px;
 }
 
+#hidden {
+    visibility: hidden;
+    height: 50px;
+    width: 200px;
+}
+
 /* #endregion Color Buttons */
+
+#reset {
+    text-align: center;
+    border: 1px solid lightgrey;
+    vertical-align: middle;
+    background-color: white;
+    height: 50px;
+    width: 200px;
+    font: 1.5rem 'Alegreya Sans', sans-serif;    
+}
