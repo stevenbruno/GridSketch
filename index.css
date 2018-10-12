@@ -1,6 +1,6 @@
 .main {
-    text-align: center;
-    margin-top: 1rem;
+    margin: 1rem 0 0 20vw;
+    padding-left: 18vw;
 }
 
 
@@ -12,16 +12,18 @@
     top: 0;
     left: 0;
     background-color: #f2f6fb;
-    overflow-x: hidden;
     box-shadow: 3px 0px 3px 0 #adab9f;
     text-align: center;
+    overflow: auto;
 }
 
+
 .sidenav ul {
-    margin-top:  12vh;
+    margin-top:  10vh;
     padding-left: 0;
     display: inline-block;
 }
+
 
 .sidenav ul>div, button {
     margin: 1rem;
@@ -32,8 +34,12 @@
 
 
 #title {
-    font: 4rem 'Lobster', cursive; 
+    font: 4rem 'Lobster', cursive;
+    width: 35.2vw;
+    text-align: center;
+    margin-bottom: 4vh;
 }
+
 
 /* #region Color Buttons */
 
@@ -69,7 +75,7 @@
 }
 
 #blue {
-    background-color: #aec6cf;
+    background-color: #b4e5fb;
     height: 50px;
     width: 200px;
 }
@@ -86,12 +92,6 @@
     width: 200px;
 }
 
-#hidden {
-    visibility: hidden;
-    height: 50px;
-    width: 200px;
-}
-
 /* #endregion Color Buttons */
 
 #reset {
@@ -102,4 +102,17 @@
     height: 50px;
     width: 200px;
     font: 1.5rem 'Alegreya Sans', sans-serif;    
+}
+
+
+#grid_container {
+    display: grid;
+    width: 35.2vw;
+    grid: repeat(16, 2.2vw) / repeat(16, 2.2vw)
+}
+
+.grid_item {
+    background-color: black;
+    border: 3px solid white;
+    border-radius: 5px;
 }
