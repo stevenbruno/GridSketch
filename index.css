@@ -96,7 +96,7 @@
 
 #reset {
     text-align: center;
-    border: 1px solid lightgrey;
+    border: 1px solid #ebebeb;
     vertical-align: middle;
     background-color: white;
     height: 50px;
@@ -112,7 +112,7 @@
 }
 
 .grid_item {
-    background-color: black;
+    background-color: grey;
     border: 3px solid white;
     border-radius: 5px;
 }
