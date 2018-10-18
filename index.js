@@ -19,6 +19,10 @@ function colorSelect() {
 }
 
 
+// add event listener to color buttons so that when one is clicked colorSelect() is executed
+let color_buttons = document.querySelectorAll(".colorButtons")
+
+
 let grid_items = document.querySelectorAll(".grid_item");
 // add event listeners (mousedown?) to grid items and change their class
 // to the selected color
