@@ -1,11 +1,17 @@
 let container = document.querySelector('#grid_container');
 
-// modify #grid_container grid style so that 16, 2.2 becomes numRows, 35.2/2.2vw
 function createGrid(numRows) {
+    let container = document.querySelector('#grid_container');
+    let rowWidth = 35.2/numRows;
+    container.style.grid = `repeat(${numRows}, ${rowWidth}vw) / repeat(${numRows}, ${rowWidth}vw)`;
+
     for (let i = 0; i < numRows; i++) {
         for (let j = 0; j < numRows; j++) {
             let box = document.createElement('div');
             box.classList.toggle('grid_item')
+            if (numRows > 30) {
+                box.style.border = '2px solid white';
+            }
             container.appendChild(box);
         }
     }
@@ -34,4 +40,4 @@ function resetBoard() {
 }
 
 
-createGrid(16);
+createGrid(48);
