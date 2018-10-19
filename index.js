@@ -18,15 +18,17 @@ function createGrid(numRows) {
 }
 
 
-// create a variable color and reassign its value when one of the buttons is selected, 
-// consider scope, set initial color to black?
-function colorSelect() {
-    //
+const colorButtons = document.querySelector('.colorButtons');
+colorButtons.addEventListener('click', colorSelect, false);
+
+
+let selectedColor = black;
+function colorSelect(e) {
+    if (e.target !== e.currentTarget) {
+        let selectedColor = e.target.style.backgroundColor;
+    }
+    e.stopPropagation();
 }
-
-
-// add event listener to color buttons so that when one is clicked colorSelect() is executed
-let color_buttons = document.querySelectorAll(".colorButtons")
 
 
 let grid_items = document.querySelectorAll(".grid_item");
