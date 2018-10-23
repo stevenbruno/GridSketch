@@ -22,10 +22,11 @@ const colorButtons = document.querySelector('.colorButtons');
 colorButtons.addEventListener('click', colorSelect, false);
 
 
-let selectedColor = black;
+let selectedColor = "black";
 function colorSelect(e) {
     if (e.target !== e.currentTarget) {
-        let selectedColor = e.target.style.backgroundColor;
+        let compStyles = window.getComputedStyle(e.target);
+        selectedColor = compStyles.getPropertyValue('background-color');
     }
     e.stopPropagation();
 }
