@@ -1,5 +1,6 @@
 let container = document.querySelector('#grid_container');
 
+
 function createGrid(numRows) {
     let container = document.querySelector('#grid_container');
     let rowWidth = 35.2/numRows;
@@ -31,10 +32,16 @@ function colorSelect(e) {
     e.stopPropagation();
 }
 
+// not yet working
+let grid_items = document.querySelectorAll('.grid_item');
+for (var i = 0; i < grid_items.length; i++) {
+    grid_items[i].addEventListener('mousedown', draw, false);
+}
 
-let grid_items = document.querySelectorAll(".grid_item");
-// add event listeners (mousedown?) to grid items and change their class
-// to the selected color
+
+function draw(e) {
+    e.target.style.backgroundColor = selectedColor;
+}
 
 
 function resetBoard() {
