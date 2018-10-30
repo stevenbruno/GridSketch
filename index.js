@@ -45,12 +45,15 @@ function draw(e) {
 
 
 function resetBoard() {
-    //execute when the reset board button is clicked
-    //set color of all grid_item elements to starting color
+    //include option to ask how many cells they want from predefined list (12, 24, 36, 48)
+    for (var i = 0; i < grid_items.length; i++) {
+        // grid_items[i].style.backgroundColor = 
+    }
 }
 
 
 createGrid(24);
+
 
 // record state of left mouse button
 let mouseDown = 0;
@@ -61,9 +64,15 @@ document.body.onmouseup = function() {
     mouseDown = 0;
 }
 
+
 // add drawing event listener to grid items
 let grid_items = document.querySelectorAll('.grid_item');
 for (var i = 0; i < grid_items.length; i++) {
     grid_items[i].addEventListener('mousedown', startDraw, false);
     grid_items[i].addEventListener('mouseenter', draw, false);
 }
+
+
+// add event listner for reset board button
+reset = document.querySelector('#reset');
+reset.addEventListener('click', resetBoard, false);
