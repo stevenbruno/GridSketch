@@ -19,11 +19,11 @@ function createGrid(numRows) {
 }
 
 
+//set and change selected color
 const colorButtons = document.querySelector('.colorButtons');
 colorButtons.addEventListener('click', colorSelect, false);
-
-
 let selectedColor = "black";
+
 function colorSelect(e) {
     if (e.target !== e.currentTarget) {
         let compStyles = window.getComputedStyle(e.target);
@@ -32,15 +32,15 @@ function colorSelect(e) {
     e.stopPropagation();
 }
 
-// not yet working
-let grid_items = document.querySelectorAll('.grid_item');
-for (var i = 0; i < grid_items.length; i++) {
-    grid_items[i].addEventListener('mousedown', draw, false);
+
+function startDraw(e) {
+    e.target.style.backgroundColor = selectedColor;
 }
 
-
 function draw(e) {
-    e.target.style.backgroundColor = selectedColor;
+    if (mouseDown == 1) {
+        e.target.style.backgroundColor = selectedColor;
+    }
 }
 
 
@@ -50,4 +50,20 @@ function resetBoard() {
 }
 
 
-createGrid(48);
+createGrid(24);
+
+// record state of left mouse button
+let mouseDown = 0;
+document.body.onmousedown = function() {
+    mouseDown = 1;
+}
+document.body.onmouseup = function() {
+    mouseDown = 0;
+}
+
+// add drawing event listener to grid items
+let grid_items = document.querySelectorAll('.grid_item');
+for (var i = 0; i < grid_items.length; i++) {
+    grid_items[i].addEventListener('mousedown', startDraw, false);
+    grid_items[i].addEventListener('mouseenter', draw, false);
+}
