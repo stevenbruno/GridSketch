@@ -1,6 +1,3 @@
-let container = document.querySelector('#grid_container');
-
-
 function createGrid(numRows) {
     let container = document.querySelector('#grid_container');
     let rowWidth = 35.2/numRows;
@@ -19,11 +16,6 @@ function createGrid(numRows) {
 }
 
 
-//set and change selected color
-const colorButtons = document.querySelector('.colorButtons');
-colorButtons.addEventListener('click', colorSelect, false);
-let selectedColor = "black";
-
 function colorSelect(e) {
     if (e.target !== e.currentTarget) {
         let compStyles = window.getComputedStyle(e.target);
@@ -37,6 +29,7 @@ function startDraw(e) {
     e.target.style.backgroundColor = selectedColor;
 }
 
+
 function draw(e) {
     if (mouseDown == 1) {
         e.target.style.backgroundColor = selectedColor;
@@ -45,14 +38,25 @@ function draw(e) {
 
 
 function resetBoard() {
-    //include option to ask how many cells they want from predefined list (12, 24, 36, 48)
     for (var i = 0; i < grid_items.length; i++) {
-        // grid_items[i].style.backgroundColor = 
+        grid_items[i].style.backgroundColor = "lightgrey"; 
     }
 }
 
 
+
+// begin main script
+
 createGrid(24);
+
+
+let container = document.querySelector('#grid_container');
+
+
+//set and change selected color
+const colorButtons = document.querySelector('.colorButtons');
+colorButtons.addEventListener('click', colorSelect, false);
+let selectedColor = "black";
 
 
 // record state of left mouse button
