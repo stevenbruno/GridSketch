@@ -24,7 +24,7 @@
 }
 
 
-.sidenav ul>div, button {
+.leftBox {
     margin: 1rem auto;
     border: none;
     border-radius: 10px;
@@ -89,13 +89,32 @@
       "tl tm tr" 50px
       "bl bm br" 50px
       / 50px 50px 50px;
+    grid-gap: 5px 10px;
     font: 1rem 'Alegreya Sans', sans-serif;  
     background-color: white;
+    margin: 1rem auto;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px 0 #adab9f;
+    width: 200px;
+    justify-content: center;
+    padding-bottom: 10px;
 }
 
 
 .resizeHeader {
+    font-size: 1.5rem;
+    grid-area: header;
+    margin: 10px;
+}
 
+.dim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgrey;
+    box-shadow: 1px 1px 1px 0 #adab9f;
+    border-radius: 5px;
 }
 
 
