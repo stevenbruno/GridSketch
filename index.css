@@ -21,12 +21,11 @@
 .sidenav ul {
     margin-top:  10vh;
     padding-left: 0;
-    display: inline-block;
 }
 
 
 .sidenav ul>div, button {
-    margin: 1rem;
+    margin: 1rem auto;
     border: none;
     border-radius: 10px;
     box-shadow: 3px 3px 4px 0 #adab9f;
@@ -80,13 +79,23 @@
 /* #endregion Color Buttons */
 
 #reset {
-    text-align: center;
-    border: 1px solid #ebebeb;
-    vertical-align: middle;
-    background-color: white;
-    height: 50px;
-    width: 200px;
     font: 1.5rem 'Alegreya Sans', sans-serif;    
+}
+
+#resizeWrapper {
+    display: grid;
+    grid: 
+      "header header header" 50px
+      "tl tm tr" 50px
+      "bl bm br" 50px
+      / 50px 50px 50px;
+    font: 1rem 'Alegreya Sans', sans-serif;  
+    background-color: white;
+}
+
+
+.resizeHeader {
+
 }
 
 
