@@ -1,4 +1,6 @@
 function createGrid(numRows) {
+    clearGrid();
+
     let container = document.querySelector('#grid_container');
     let rowWidth = 35.2/numRows;
     container.style.grid = `repeat(${numRows}, ${rowWidth}vw) / repeat(${numRows}, ${rowWidth}vw)`;
@@ -12,6 +14,15 @@ function createGrid(numRows) {
             }
             container.appendChild(box);
         }
+    }
+}
+
+
+function clearGrid() {
+    let gridCells = document.getElementsByClassName("grid_item");
+
+    while(gridCells[0]) {
+        gridCells[0].parentNode.removeChild(gridCells[0]);
     }
 }
 
