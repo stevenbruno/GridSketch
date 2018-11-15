@@ -115,6 +115,8 @@
     border: 1px solid grey;
     border-radius: 25px;
     box-shadow: 1px 1px 1px 0px grey;
+    font: 1rem 'Alegreya Sans', sans-serif;  
+    cursor: pointer;
 }
 
 

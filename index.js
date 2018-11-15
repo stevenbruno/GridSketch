@@ -38,7 +38,7 @@ function draw(e) {
 
 
 function resetBoard() {
-    for (var i = 0; i < grid_items.length; i++) {
+    for (let i = 0; i < grid_items.length; i++) {
         grid_items[i].style.backgroundColor = "lightgrey"; 
     }
 }
@@ -53,7 +53,6 @@ createGrid(24);
 let container = document.querySelector('#grid_container');
 
 
-//set and change selected color
 const colorButtons = document.querySelector('.colorButtons');
 colorButtons.addEventListener('click', colorSelect, false);
 let selectedColor = "black";
@@ -69,7 +68,6 @@ document.body.onmouseup = function() {
 }
 
 
-// add drawing event listener to grid items
 let grid_items = document.querySelectorAll('.grid_item');
 for (var i = 0; i < grid_items.length; i++) {
     grid_items[i].addEventListener('mousedown', startDraw, false);
@@ -77,14 +75,12 @@ for (var i = 0; i < grid_items.length; i++) {
 }
 
 
-// add event listner for reset board button
 let reset = document.querySelector('#reset');
 reset.addEventListener('click', resetBoard, false);
 
 
-// the following code should assign the proper click events to each dimbuttons but its broken
 let dimButtons = document.querySelectorAll('.dim');
 const dimensions = [3, 4, 9, 12, 24, 48]
-for (var i = 0; i < dimButtons.length; i++) {
-    dimButtons[i].addEventListener('click', createGrid(dimensions[i]), false);
+for (let i = 0; i < dimButtons.length; i++) {
+    dimButtons[i].addEventListener('click', function() {createGrid(dimensions[i]);}, false);
 }
