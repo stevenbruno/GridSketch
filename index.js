@@ -1,7 +1,6 @@
 function createGrid(numRows) {
     clearGrid();
 
-    let container = document.querySelector('#grid_container');
     let rowWidth = 35.2/numRows;
     container.style.grid = `repeat(${numRows}, ${rowWidth}vw) / repeat(${numRows}, ${rowWidth}vw)`;
 
@@ -10,10 +9,16 @@ function createGrid(numRows) {
             let box = document.createElement('div');
             box.classList.toggle('grid_item')
             if (numRows > 30) {
-                box.style.border = '2px solid white';
+                box.style.border = '1px solid white';
             }
             container.appendChild(box);
         }
+    }
+
+    let grid_items = document.querySelectorAll('.grid_item');
+    for (var i = 0; i < grid_items.length; i++) {
+        grid_items[i].addEventListener('mousedown', startDraw, false);
+        grid_items[i].addEventListener('mouseenter', draw, false);
     }
 }
 
@@ -52,22 +57,22 @@ function resetBoard() {
     for (let i = 0; i < grid_items.length; i++) {
         grid_items[i].style.backgroundColor = "lightgrey"; 
     }
+    selectedColor = 'black';
 }
 
 
 
 // begin main script
 
-createGrid(24);
-
-
-let container = document.querySelector('#grid_container');
-
-
-const colorButtons = document.querySelector('.colorButtons');
-colorButtons.addEventListener('click', colorSelect, false);
+const container = document.querySelector('#grid_container');
 let selectedColor = "black";
 
+createGrid(24);
+
+const colorButtons = document.querySelectorAll('.color');
+for (let i = 0; i < colorButtons.length; i++) {
+    colorButtons[i].addEventListener('click', colorSelect, false);
+}
 
 // record state of left mouse button
 let mouseDown = 0;
@@ -76,13 +81,6 @@ document.body.onmousedown = function() {
 }
 document.body.onmouseup = function() {
     mouseDown = 0;
-}
-
-
-let grid_items = document.querySelectorAll('.grid_item');
-for (var i = 0; i < grid_items.length; i++) {
-    grid_items[i].addEventListener('mousedown', startDraw, false);
-    grid_items[i].addEventListener('mouseenter', draw, false);
 }
 
 
