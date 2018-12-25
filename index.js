@@ -7,7 +7,7 @@ function createGrid(numRows) {
     for (let i = 0; i < numRows; i++) {
         for (let j = 0; j < numRows; j++) {
             let box = document.createElement('div');
-            box.classList.toggle('grid_item')
+            box.classList.add('grid_item')
             if (numRows > 30) {
                 box.style.border = '1px solid white';
             }
@@ -16,7 +16,7 @@ function createGrid(numRows) {
     }
 
     let grid_items = document.querySelectorAll('.grid_item');
-    for (var i = 0; i < grid_items.length; i++) {
+    for (let i = 0; i < grid_items.length; i++) {
         grid_items[i].addEventListener('mousedown', startDraw, false);
         grid_items[i].addEventListener('mouseenter', draw, false);
     }
@@ -33,11 +33,8 @@ function clearGrid() {
 
 
 function colorSelect(e) {
-    if (e.target !== e.currentTarget) {
-        let compStyles = window.getComputedStyle(e.target);
-        selectedColor = compStyles.getPropertyValue('background-color');
-    }
-    e.stopPropagation();
+    let compStyles = window.getComputedStyle(e.target);
+    selectedColor = compStyles.getPropertyValue('background-color');
 }
 
 
@@ -84,11 +81,11 @@ document.body.onmouseup = function() {
 }
 
 
-let reset = document.querySelector('#reset');
+const reset = document.querySelector('#reset');
 reset.addEventListener('click', resetBoard, false);
 
 
-let dimButtons = document.querySelectorAll('.dim');
+const dimButtons = document.querySelectorAll('.dim');
 const dimensions = [3, 4, 9, 12, 24, 48]
 for (let i = 0; i < dimButtons.length; i++) {
     dimButtons[i].addEventListener('click', function() {createGrid(dimensions[i]);}, false);
