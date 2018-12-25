@@ -31,6 +31,7 @@
     box-shadow: 3px 3px 4px 0 #adab9f;
     height: 50px;
     width: 200px;
+    cursor: pointer;
 } 
 
 
@@ -79,7 +80,9 @@
 /* #endregion Color Buttons */
 
 #reset {
-    font: 1.5rem 'Alegreya Sans', sans-serif;    
+    font: 1.5rem 'Alegreya Sans', sans-serif;
+    color: white; 
+    background-color: black;   
 }
 
 #resizeWrapper {
@@ -111,6 +114,7 @@
 .dim {
     display: flex;
     align-items: center;
+    background-color: white;
     justify-content: center;
     border: 1px solid grey;
     border-radius: 25px;
