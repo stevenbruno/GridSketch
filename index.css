@@ -104,7 +104,6 @@
     padding-bottom: 10px;
 }
 
-
 .resizeHeader {
     font-size: 1.5rem;
     grid-area: header;
@@ -123,6 +122,9 @@
     cursor: pointer;
 }
 
+.dim:focus {
+    outline: 0;
+}
 
 #grid_container {
     display: grid;
