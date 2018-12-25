@@ -15,7 +15,7 @@ function createGrid(numRows) {
         }
     }
 
-    let grid_items = document.querySelectorAll('.grid_item');
+    grid_items = document.querySelectorAll('.grid_item');
     for (let i = 0; i < grid_items.length; i++) {
         grid_items[i].addEventListener('mousedown', startDraw, false);
         grid_items[i].addEventListener('mouseenter', draw, false);
@@ -63,6 +63,7 @@ function resetBoard() {
 
 const container = document.querySelector('#grid_container');
 let selectedColor = "black";
+let grid_items;
 
 createGrid(24);
 
