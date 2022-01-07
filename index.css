@@ -1,139 +1,145 @@
 .main {
-    margin: 1rem 0 0 20vw;
-    padding-left: 18vw;
+  margin: 2rem 0 0 20vw;
+  padding-left: 18vw;
 }
 
-
-.sidenav { /* for desktop */
-    height: 100%;
-    width: 20vw;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #f2f6fb;
-    box-shadow: 4px 0px 4px 0 #e0e0e0;
-    text-align: center;
-    overflow: auto;
+.sidenav {
+  /* for desktop */
+  height: 100%;
+  width: 20vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #f2f6fb;
+  box-shadow: 2px 0px 2px 0 #e0e0e0;
+  text-align: center;
+  overflow: auto;
+  padding-top: 80px;
 }
-
 
 .sidenav ul {
-    margin-top:  10vh;
-    padding-left: 0;
+  margin-top: 10vh;
+  padding-left: 0;
 }
-
 
 .leftBox {
-    margin: 1rem auto;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 3px 3px 4px 0 #adab9f;
-    height: 50px;
-    width: 200px;
-    cursor: pointer;
-} 
-
-
-#title {
-    font: 4rem 'Lobster', cursive;
-    width: 35.2vw;
-    text-align: center;
-    margin-bottom: 4vh;
+  margin: 1rem auto;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px 0 #adab9f;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
 }
 
+.colorsgrid {
+  display: grid;
+  grid-template-columns: 80px 80px;
+  justify-content: center;
+  /* justify-content: space-between; */
+}
+
+#title {
+  font: 4rem "Lobster", cursive;
+  width: 35.2vw;
+  text-align: center;
+  margin-bottom: 4vh;
+}
 
 /* #region Colors  */
 
 #black {
-    background-color: black;
+  background-color: black;
 }
 
 #red {
-    background-color: #ff6961;
+  background-color: #ff6961;
 }
 
 #orange {
-    background-color: #ffb347;
+  background-color: #ffb347;
 }
 
 #yellow {
-    background-color: #fdfd96;
+  background-color: #fdfd96;
 }
 
 #green {
-    background-color: #77dd77;
+  background-color: #77dd77;
 }
 
 #blue {
-    background-color: #b4e5fb;
+  background-color: #b4e5fb;
 }
 
 #purple {
-    background-color: #b19cd9;
+  background-color: #b19cd9;
 }
 
 #white {
-    background-color: white;
+  background-color: white;
 }
 
 /* #endregion Color Buttons */
 
 #reset {
-    font: 1.5rem 'Alegreya Sans', sans-serif;
-    color: white; 
-    background-color: black;   
+  font: 1.5rem "Alegreya Sans", sans-serif;
+  font-weight: medium;
+  color: white;
+  background-color: black;
+  width: 200px;
 }
 
 #resizeWrapper {
-    display: grid;
-    grid: 
-      "header header header" 50px
-      "tl tm tr" 50px
-      "bl bm br" 50px
-      / 50px 50px 50px;
-    grid-gap: 5px 10px;
-    font: 1rem 'Alegreya Sans', sans-serif;  
-    background-color: white;
-    margin: 1rem auto;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 3px 3px 4px 0 #adab9f;
-    width: 200px;
-    justify-content: center;
-    padding-bottom: 10px;
+  display: grid;
+  grid:
+    "header header header" 50px
+    "tl tm tr" 50px
+    "bl bm br" 50px
+    / 50px 50px 50px;
+  grid-gap: 5px 10px;
+  font: 1rem "Alegreya Sans", sans-serif;
+  background-color: white;
+  margin: 1rem auto;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px 0 #adab9f;
+  width: 200px;
+  justify-content: center;
+  padding-bottom: 10px;
 }
 
 .resizeHeader {
-    font-size: 1.5rem;
-    grid-area: header;
-    margin: 10px;
+  font-size: 1.5rem;
+  grid-area: header;
+  margin: 10px;
 }
 
 .dim {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    justify-content: center;
-    border: 1px solid grey;
-    border-radius: 25px;
-    box-shadow: 1px 1px 1px 0px grey;
-    font: 1rem 'Alegreya Sans', sans-serif;  
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: center;
+  border: 1px solid grey;
+  border-radius: 25px;
+  box-shadow: 1px 1px 1px 0px grey;
+  font: 1rem "Alegreya Sans", sans-serif;
+  cursor: pointer;
 }
 
 .dim:focus {
-    outline: 0;
+  outline: 0;
 }
 
 #grid_container {
-    display: grid;
-    width: 35.2vw;
-    grid: repeat(16, 2.2vw) / repeat(16, 2.2vw)
+  display: grid;
+  width: 35.2vw;
+  grid: repeat(16, 2.2vw) / repeat(16, 2.2vw);
 }
 
 .grid_item {
-    background-color: lightgrey;
-    border: 3px solid white;
-    border-radius: 5px;
+  background-color: lightgrey;
+  border: 3px solid white;
+  border-radius: 5px;
 }
