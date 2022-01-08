@@ -1,11 +1,13 @@
 body {
   cursor: url(./cursors/black.png), auto;
   height: 100vh;
+  margin: 0;
 }
 
 .main {
-  margin: 2rem 0 0 20vw;
+  margin-left: 20vw;
   padding-left: 18vw;
+  padding-top: 2rem;
 }
 
 .sidenav {
