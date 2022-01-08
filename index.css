@@ -27,10 +27,18 @@
   margin: 1rem auto;
   border: none;
   border-radius: 10px;
-  box-shadow: 3px 3px 4px 0 #adab9f;
+  box-shadow: 1px 3px 4px 0 #a7a7a7;
   height: 50px;
   width: 50px;
   cursor: pointer;
+}
+
+.leftBox:hover {
+  box-shadow: 0px 5px 10px 2px #bebebe;
+}
+
+.leftBox:active {
+  box-shadow: 0px 1px 2px 0 #807f7c;
 }
 
 .colorsgrid {
@@ -45,6 +53,13 @@
   width: 35.2vw;
   text-align: center;
   margin-bottom: 4vh;
+  background: -webkit-linear-gradient(
+    right,
+    hsla(219, 100%, 44%, 0.993),
+    rgb(206, 0, 233)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* #region Colors  */
@@ -130,6 +145,14 @@
 
 .dim:focus {
   outline: 0;
+}
+
+.dim:hover {
+  box-shadow: 1px 3px 3px 0px rgb(158, 158, 158);
+}
+
+.dim:active {
+  box-shadow: 0px -1px 2px 0px rgb(158, 158, 158);
 }
 
 #grid_container {
