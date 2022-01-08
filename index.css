@@ -1,3 +1,8 @@
+body {
+  cursor: url(./cursors/black.png), auto;
+  height: 100vh;
+}
+
 .main {
   margin: 2rem 0 0 20vw;
   padding-left: 18vw;
@@ -55,10 +60,11 @@
   margin-bottom: 4vh;
   background: -webkit-linear-gradient(
     right,
-    hsla(219, 100%, 44%, 0.993),
+    hsla(212, 100%, 44%, 0.993),
     rgb(206, 0, 233)
   );
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
