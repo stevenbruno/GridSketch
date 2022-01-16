@@ -51,7 +51,6 @@ function resetBoard() {
   for (let i = 0; i < grid_items.length; i++) {
     grid_items[i].style.backgroundColor = "lightgrey";
   }
-  selectedColor = "black";
 }
 
 // begin main script
